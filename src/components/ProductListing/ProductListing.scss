@@ -1,0 +1,126 @@
+.productlisting-container {
+	width: 80%;
+	padding: 1rem;
+	margin: 0 auto;
+}
+.grid-3-columnlayout {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	grid-column-gap: 2rem;
+	grid-row-gap: 3.5rem;
+	max-width: 100rem;
+	margin: 0 auto;
+}
+.no-items-filter {
+	font-size: 1.8rem;
+	color: var(--primary-text-color);
+	margin-top: 5rem;
+}
+.product-listing-card {
+	max-width: 240px;
+	min-height: 400px;
+	background-color: var(--complimentary-text-color);
+	border-radius: 10px;
+	position: relative;
+	margin: 0 1rem;
+	margin-bottom: 1rem;
+	margin-top: 2rem;
+	border: 1px solid var(--border-color);
+	.product-listing-image {
+		width: 240px;
+		height: 250px;
+		display: flex;
+		cursor: pointer;
+		.product-responsive-image {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.product-listing-description {
+		margin: 0.5rem 1.5rem;
+		padding: 0.5rem 0;
+		h4 {
+			font-size: 1.6rem;
+			color: var(--primary-text-color);
+		}
+		p {
+			padding: 0.5rem 0;
+			font-size: 1.3rem;
+			color: #535766;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.product-listing-price {
+			padding: 0 0.25rem;
+		}
+		.actual-price {
+			font-size: 1.25rem;
+			text-decoration: line-through;
+		}
+		.discount-price {
+			font-size: 1.6rem;
+			font-weight: bold;
+			padding-left: 0;
+		}
+		.product-sizes {
+			padding: 0.5rem 0;
+			label {
+				font-size: 1.6rem;
+				select {
+					margin: 0 0.5rem;
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
+	.product-listing-btn {
+		text-decoration: none;
+		font-size: 1.6rem;
+		padding: 1rem 1.6rem;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		border: none;
+		width: 90%;
+		cursor: pointer;
+		.product-listing-icon {
+			margin-right: 0.5rem;
+		}
+	}
+	.product-listing-rating {
+		position: absolute;
+		min-width: 5rem;
+		height: 2.5rem;
+		padding: 3px 5px;
+		font-size: 1.5rem;
+		background-color: var(--primary-color);
+		border-radius: 3px;
+		color: var(--complimentary-text-color);
+		bottom: 16rem;
+		left: 1rem;
+	}
+	.product-listing-wishicon {
+		position: absolute;
+		padding: 3px 5px;
+		border-radius: 3px;
+		top: 1rem;
+		right: 1rem;
+		font-size: 2.2rem;
+		cursor: pointer;
+	}
+	.wish-active {
+		color: var(--primary-color);
+	}
+	.wish-inactive {
+		color: lightblue;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.grid-3-columnlayout {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
